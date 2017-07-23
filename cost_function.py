@@ -81,7 +81,7 @@ def plot_contour(X, Y, ax, title):
 # Create dataset
 N = 100
 X = np.concatenate((np.ones((N, 1)), np.random.randn(N, 1)*3+2), axis=1)
-Y = X[:,0]*X[:,0] + 3*X[:,1]
+Y = 3*X[:,1] + 1
 
 # Parameters for the contour plot
 n = 100
