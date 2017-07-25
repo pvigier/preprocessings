@@ -75,7 +75,7 @@ def plot_contour(X, Y, ax, title):
     cp = ax.contour(cost, levels, extent=extent)
     ax.clabel(cp)
     ax.axis('scaled')
-    ax.set_title('Without preprocessings')
+    ax.set_title(title)
     return w_best
 
 # Create dataset
@@ -109,6 +109,6 @@ ws2 = descend_gradient(w0, X, Y, nb_steps)
 
 # Create animation
 ani = plot_gradient_descent(ws1, ws2)
-ani.save('cost_function.gif', dpi=80, writer='imagemagick')
+ani.save('cost_function.gif', dpi=160, writer='imagemagick')
 
 plt.show()
